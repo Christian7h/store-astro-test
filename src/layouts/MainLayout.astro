@@ -3,6 +3,7 @@ import Navbar from "@/components/shared/Navbar.astro";
 
 import "@/assests/styles/global.css";
 import { ViewTransitions } from "astro:transitions";
+import WhatsApp from "@/components/Frontend/WhatsApp.astro";
 
 interface Props {
   title?: string;
@@ -42,14 +43,16 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
   </head>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
   <body>
     
     <Navbar />
 
-    <main class="container m-auto max-w-4xl px-5 mt-20">
+    <main>
       <slot />
     </main>
-
+ <WhatsApp/>
 <script>
         // @ts-ignore
   window.SnipcartSettings = {

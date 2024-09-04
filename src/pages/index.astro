@@ -5,12 +5,15 @@ import { ProductList } from '@/components';
 import Upauto from '@/components/Frontend/Upauto.astro';
 import Topbar from '@/components/Frontend/Topbar.astro';
 import New from '@/components/Frontend/New.astro';
+import Footer from '@/components/Frontend/Footer.astro';
+
 
 
 import Navbar from '@/components/shared/Navbar.astro';
 import Pagination from '@/components/shared/Pagination.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { actions } from 'astro:actions';
+import Carusel from '@/components/Frontend/Carusel.astro';
 
 const searchParams= Astro.url.searchParams;
 const pageParam = Number(searchParams.get('page') ?? 1);
@@ -30,11 +33,28 @@ if(data.products.length == 0){
   return Astro.redirect('/');
 }
 ---
-<Topbar/>
-<Upauto/>
+
+
 <MainLayout>
- <New/>
+  <Topbar/>
+  <Carusel/>  
+  
+  <div class="grid grid-cols-2 grid-rows-2 gap-2 w-[80%] mx-auto mt-8 max-[572px]:gap-5 max-[572px]:w-[97%]">
+    <New/>
+    <New/>
+    <New/>
+    <New/>
+    <New/>
+    <New/>
+  </div>
+  
+  <Footer/>
+  <Upauto/>
+    
+  
+
+  
+ 
 
  
-  
 </MainLayout>
