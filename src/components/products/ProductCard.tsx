@@ -17,6 +17,7 @@ export const ProductCard = ({ product }: Props) => {
     const [currentImage, setCurrentImage] = useState(images[0]);
     // Este no es un comentario JSX
     return (
+            < a href={`/products/${product.slug}`}>
         <div className="w-[90%] mx-auto rounded-md overflow-hidden shadow-md hover:shadow-lg border">
         <div className="relative">
             <img
@@ -33,14 +34,15 @@ export const ProductCard = ({ product }: Props) => {
             
             <div className=" grid grid-cols-3 grid-rows-1 ">
                 <span className="font-bold text-lg text-[#231f20] col-span-2">${product.price}</span>
-                <button className="button col-start-3 ">
-                <a href={`/products/${product.slug}`} className=" bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition duration-200 ease-in-out">Comprar</a>
-                </button>
                 
+                <button className="button col-start-3 ">
+                <a href={`/products/${product.slug}`} className=" bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition duration-200 ease-in-out">Ver Producto !</a>
+                </button>
             </div>
             </div>
           </div>
       </div>
+      </a>
       
     );
 };
