@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 
 ---
@@ -76,3 +77,97 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" is:inline>
   
+=======
+
+    <div class="relative w-full max-w-4xl mx-auto mt-12
+">
+        <!-- Carousel wrapper -->
+        <div class="overflow-hidden relative rounded-lg">
+            <div
+                class="flex transition-transform duration-500 ease-in-out transform"
+                id="carousel"
+            >
+                <!-- Slide 1 -->
+                <div class="min-w-full">
+                    <img
+                        src="https://via.placeholder.com/800x400/FFB6C1/000000"
+                        alt="Slide 1"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full">
+                    <img
+                        src="https://via.placeholder.com/800x400/87CEFA/000000"
+                        alt="Slide 2"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full">
+                    <img
+                        src="https://via.placeholder.com/800x400/98FB98/000000"
+                        alt="Slide 3"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+            onclick="scrollCarousel(-1)"
+        >
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                ></path>
+            </svg>
+        </button>
+        <button
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+            onclick="scrollCarousel(1)"
+        >
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                ></path>
+            </svg>
+        </button>
+    </div>
+
+    
+
+<script is:inline>
+    let currentIndex = 0;
+
+    function scrollCarousel(direction) {
+        const carousel = document.getElementById("carousel");
+        const totalSlides = carousel.children.length;
+        currentIndex =
+            (currentIndex + direction + totalSlides) % totalSlides;
+        carousel.style.transform = `translateX(-${
+            currentIndex * 100
+        }%)`;
+    }
+</script>
+>>>>>>> 284a5e682a8299919aa1a02843a926017fc24245
