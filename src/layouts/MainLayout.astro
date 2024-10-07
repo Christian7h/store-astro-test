@@ -3,12 +3,8 @@ import Navbar from "@/components/shared/Navbar.astro";
 
 import "@/assests/styles/global.css";
 import { ViewTransitions } from "astro:transitions";
-<<<<<<< HEAD
 import Footer from "@/components/shared/Footer.astro";
 import Whats from "@/components/Frontend/Whats.astro";
-=======
-import WhatsApp from "@/components/Frontend/WhatsApp.astro";
->>>>>>> 284a5e682a8299919aa1a02843a926017fc24245
 
 interface Props {
   title?: string;
@@ -48,13 +44,11 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
   </head>
-<<<<<<< HEAD
   <body class="bg-[#f8f6f1]">
     <Navbar />
       <slot />
     <Footer/>
     <Whats/>
-=======
 
   <body>
     
@@ -63,8 +57,6 @@ const {
     <main class="bg-[#f8f6f1]">
       <slot />
     </main>
- <WhatsApp/>
->>>>>>> 284a5e682a8299919aa1a02843a926017fc24245
 <script>
         // @ts-ignore
   window.SnipcartSettings = {
