@@ -8,19 +8,21 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" is:inline></script>
 
     <!-- Slider main container -->
-<div class="swiper w-full h-[25rem] ">
+<div class="swiper w-full h-max ">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide" data-swiper-autoplay="2000">
-        <img src="https://placehold.co/1920x400/FFC0CB/FFFFFF/png" class="mx-auto" alt="">
+        <div class="swiper-slide" data-swiper-autoplay="2000"><img src="https://placehold.co/600x400" alt=""></div>
       </div>
 
-      <div class="swiper-slide" data-swiper-autoplay="2000">
-        <img src="https://placehold.co/1920x400/FFC0CB/000000/png" class="bg-cover" alt="nino yamata">
-      </div>
-      <div class="swiper-slide" data-swiper-autoplay="2000"><img src="https://placehold.co/1920x400" alt=""></div>
+           <div class="swiper-slide" data-swiper-autoplay="2000">
+          <img src="https://placehold.co/600x400?text=Hello+World" class="bg-cover" alt="nino yamata">        
+          </div>
+
+      <div class="swiper-slide" data-swiper-autoplay="2000"><img src="https://placehold.co/600x400" alt=""></div>
      
+
     </div>
     
   
@@ -65,7 +67,23 @@
 
 
 
+<script>
+ 
+function checkWidth() {
+    const slide = document.querySelector('.swiper-slide');
+    if (window.innerWidth <= 570) {
+        if (slide) {
+            slide.remove(); // Elimina el elemento del DOM
+        }
+    }
+}
 
+// Ejecuta la función al cargar la página
+checkWidth();
+
+// Agrega un listener para el evento de redimensionamiento
+window.addEventListener('resize', checkWidth);
+</script>
 
 
 
